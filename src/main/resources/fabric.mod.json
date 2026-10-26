@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "labtrace",
+  "version": "${version}",
+  "name": "LabTrace Stage 1",
+  "description": "Passive client telemetry and event logging for a private anti-cheat test lab.",
+  "authors": ["LabTrace"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.labtrace.LabTraceClient"]
+  },
+  "mixins": [
+    {
+      "config": "labtrace.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
